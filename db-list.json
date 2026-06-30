@@ -1,0 +1,31 @@
+{
+  "regq_version": "2026-06-08",
+  "regq_url": "regq.py",
+  "socs": {
+    "mercury": {
+      "version": "2026-06-02",
+      "db_url": "dbs/mercury.db",
+      "keywords": [
+        "mercury",
+        "ca8299",
+        "CA8299"
+      ]
+    },
+    "venus-c": {
+      "version": "2026-06-02",
+      "db_url": "dbs/venus-c.db",
+      "keywords": [
+        "venus-c",
+        "venus_c"
+      ]
+    },
+    "venus-d": {
+      "version": "2026-06-02",
+      "db_url": "dbs/venus-d.db",
+      "keywords": [
+        "venus-d",
+        "venus_d"
+      ]
+    }
+  }
+}
