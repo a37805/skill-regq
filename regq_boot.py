@@ -86,15 +86,7 @@ def _download(url, dest: Path):
 
 
 def fetch_db_list():
-    """Fetch db-list.json; check skill dir first, then server, then cache."""
-    # 1. Check if bundled in skill directory (Marketplace install)
-    bundled = SKILL_DIR / "db-list.json"
-    if bundled.exists():
-        try:
-            return json.loads(bundled.read_text(encoding="utf-8")), "bundled"
-        except Exception as e:
-            _eprint(f"bundled db-list.json unreadable: {e}")
-    # 2. Try server download
+    """Fetch db-list.json from the regq server; fall back to cached copy."""
     dest = CACHE_DIR / "db-list.json"
     try:
         data = _download(DB_LIST_URL, dest)
